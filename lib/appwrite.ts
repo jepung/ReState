@@ -54,7 +54,6 @@ export async function logout() {
     await account.deleteSession("current");
     return true;
   } catch (e) {
-    console.error(e);
     return false;
   }
 }
@@ -70,7 +69,6 @@ export async function getCurrentUser() {
       avatar: userAvatar.toString(),
     };
   } catch (e) {
-    console.error(e);
     return null;
   }
 }
